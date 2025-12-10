@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "sessions": {
+      "$sessionId": {
+        ".read": true,
+        ".write": "!data.exists() || (now - data.child('createdAt').val() < 3600000)",
+        ".validate": "newData.hasChildren(['id', 'createdAt', 'status'])",
+        ".indexOn": ["status", "createdAt"]
+      }
+    }
+  }
+}

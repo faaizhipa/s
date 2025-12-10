@@ -1,0 +1,8 @@
+{
+  "name": "trick-or-treat",
+  "version": "2.0.0",
+  "description": "QR-based phone-web interaction system using Firebase",
+  "keywords": ["qr", "firebase", "realtime-database", "phone", "web"],
+  "author": "",
+  "license": "MIT"
+}
