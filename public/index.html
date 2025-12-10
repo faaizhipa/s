@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibbage Gift Reveal - TrickOrTreat</title>
+    <link rel="stylesheet" href="css/display.css">
+</head>
+
+<body>
+    <!-- Audio link is broken/forbidden (403), commenting out for now
+    <audio id="fibbage-audio"
+        src="https://cdn.pixabay.com/download/audio/2023/10/08/audio_0e9bdfbfe8.mp3?filename=retro-game-arcade-174197.mp3"
+        preload="auto" loop></audio>
+    -->
+    <!-- Dark overlay that shows until mobile page connects -->
+    <div id="dark-overlay" class="dark-overlay active"></div>
+
+    <div id="app">
+        <button id="sound-toggle" class="sound-toggle">Play fibbage vibes</button>
+        <div id="normal-display" class="state active">
+            <div class="backdrop">
+                <div class="looping-video">
+                    <div class="video-noise">Looping video on repeat...</div>
+                </div>
+                <div class="container overlay-card">
+                    <p class="eyebrow">Secret Santa broadcast</p>
+                    <h1>Open the URL to unlock your fibbage-style gift journey</h1>
+                    <p class="instruction">Open this URL on your phone:</p>
+                    <div id="url-display" class="url-display">
+                        <span class="url-text">https://faaizhipa.github.io/TrickOrTreat/public/mobile.html</span>
+                    </div>
+                    <p class="instruction pulse">Waiting for Shantini to join...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="sequence-display" class="state">
+            <div class="container sequence-wrapper">
+                <div class="sequence-step active" id="intro-step">
+                    <p class="eyebrow">Video paused</p>
+                    <h2>Shantini, you're not gonna bring anything home today...sorry</h2>
+                    <div class="countdown-line">Look at the TV in <span id="tv-countdown">3</span>...</div>
+                    <p class="tagline">A fibbage-flavored reveal is loading.</p>
+                    <p class="message">Your secret santa apologises for the logistical chaos—his brain_script.js got
+                        stuck at an if/else when choosing your gift. So here is... something... hopefully.</p>
+                    <div class="options-board">
+                        <h3>Pick your prize:</h3>
+                        <ul>
+                            <li><strong>UBeesize 62'' Magnetic Selfie Stick Phone Tripod</strong><span
+                                    class="full-title">Full Title: UBeesize 62'' Magnetic Selfie Stick Phone Tripod with
+                                    Wireless Remote, Extendable Cell Phone Tripod Stand, Compatible with MagSafe,
+                                    Cellphone Tripod for iPhone 17 16 15 14 13 12 and Android Phones</span></li>
+                            <li><strong>LOVEVOOK Laptop Backpack for Women</strong><span class="full-title">Full Title:
+                                    LOVEVOOK Laptop Backpack for Women with Pouch Pocket for Large Capacity Cup, 17 Inch
+                                    Teacher Nurse College Work Backpack Purse, Waterproof Laptop Bag Computer Back Pack
+                                    for Travel, Beige-Pink-Brown</span></li>
+                            <li><strong>SHENHE Women's 2 Pack Satin Pajama Set</strong><span class="full-title">Full
+                                    Title: SHENHE Women's 2 Pack Satin Pajama Set Button Down Short Sleeve Striped Top
+                                    and Bow Shorts Pjs Set Loungewear Black and Pink Small</span></li>
+                        </ul>
+                    </div>
+                    <p class="prompt">A "choose your pick" form just appeared on your phone. Make your call.</p>
+                </div>
+                <div class="sequence-step" id="reveal-step">
+                    <div id="confetti-container"></div>
+                    <h2 id="choice-reveal">Shantini chooses...</h2>
+                    <p id="delivery-note"></p>
+                    <p id="ending-note" class="tagline"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+
+    <!-- App Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/display.js"></script>
+</body>
+
+</html>

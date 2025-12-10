@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Pick - TrickOrTreat</title>
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Countdown View -->
+        <div id="countdown-view" class="view active">
+            <div class="container">
+                <p class="eyebrow">Link locked in</p>
+                <h1>Look at the TV in <span id="countdown-number">3</span>...</h1>
+                <p class="tagline">The looping video will stop and a fibbage-style intro will appear.</p>
+                <p class="note">Hang tight while the soundtrack warms up.</p>
+            </div>
+        </div>
+
+        <!-- Form View -->
+        <div id="form-view" class="view">
+            <div class="container">
+                <h1>Choose your pick</h1>
+                <p class="tagline">Secret Santa’s brain_script.js got stuck. You get to decide.</p>
+
+                <form id="submission-form">
+                    <div class="option-grid">
+                        <label class="option-card">
+                            <input type="radio" name="gift" value="ubeesize" required>
+                            <span class="option-title">UBeesize 62'' Magnetic Selfie Stick Phone Tripod</span>
+                            <span class="option-subtitle">Full Title: UBeesize 62'' Magnetic Selfie Stick Phone Tripod
+                                with Wireless Remote, Extendable Cell Phone Tripod Stand, Compatible with MagSafe,
+                                Cellphone Tripod for iPhone 17 16 15 14 13 12 and Android Phones</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="gift" value="lovevook" required>
+                            <span class="option-title">LOVEVOOK Laptop Backpack for Women</span>
+                            <span class="option-subtitle">Full Title: LOVEVOOK Laptop Backpack for Women with Pouch
+                                Pocket for Large Capacity Cup, 17 Inch Teacher Nurse College Work Backpack Purse,
+                                Waterproof Laptop Bag Computer Back Pack for Travel, Beige-Pink-Brown</span>
+                        </label>
+                        <label class="option-card">
+                            <input type="radio" name="gift" value="shenhe" required>
+                            <span class="option-title">SHENHE Women's 2 Pack Satin Pajama Set</span>
+                            <span class="option-subtitle">Full Title: SHENHE Women's 2 Pack Satin Pajama Set Button Down
+                                Short Sleeve Striped Top and Bow Shorts Pjs Set Loungewear Black and Pink Small</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group inline">
+                        <p class="label">Delivery vibe?</p>
+                        <label class="pill">
+                            <input type="radio" name="delivery" value="home" required>
+                            Home (promise I don’t know where you live, but Sarah does)
+                        </label>
+                        <label class="pill">
+                            <input type="radio" name="delivery" value="office">
+                            Office drop-off
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send my pick</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Success View -->
+        <div id="success-view" class="view">
+            <div class="container">
+                <div class="success-icon">✅</div>
+                <h1>Locked in!</h1>
+                <p>Your choice is now blasting on the TV with confetti.</p>
+                <p class="note">Enjoy the fibbage ending. Happy holidays!</p>
+            </div>
+        </div>
+
+        <!-- Error View -->
+        <div id="error-view" class="view">
+            <div class="container">
+                <div class="error-icon">❌</div>
+                <h1>Error</h1>
+                <p id="error-message">Something went wrong. Please try again.</p>
+                <button onclick="location.reload()" class="btn-retry">Retry</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+    <!-- App Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/mobile.js"></script>
+</body>
+
+</html>
